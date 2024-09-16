@@ -1,0 +1,22 @@
+# Compiled object files
+*.o
+*.out
+*.lo
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Executables
+*.exe
+*.out
+
+# VS Code settings (optional)
+.vscode/
+
+# Debug files
+*.dSYM/
+*.dSYM/*
