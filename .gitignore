@@ -31,7 +31,7 @@
 *.out
 *.app
 
-# VS Code settings (optional)
+# VS Code settings
 .vscode/
 
 # Debug files
