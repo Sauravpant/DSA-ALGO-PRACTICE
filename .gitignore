@@ -7,6 +7,9 @@
 *.o
 *.obj
 
+# JSON files
+*.JSON
+
 # Precompiled Headers
 *.gch
 *.pch
@@ -31,7 +34,7 @@
 *.out
 *.app
 
-# VS Code settings (optional)
+# VS Code settings 
 .vscode/
 
 # Debug files
