@@ -44,9 +44,29 @@ bool check(string s,int slider){
     return false;
 
     return check(s,slider+1);
-
-
 }
+//Recursive function to print the subsequence whose sum equals to k
+
+void printSubsequence(int indx,vector<int>&v,int s,int sum,int arr[],int n){
+    if(indx==n){
+        if(s==sum){
+        for(int i:v){
+            cout<<i<<" ";
+        }
+        cout<<endl;
+        }
+        return;
+    
+    }
+    v.push_back(arr[indx]);
+    s+=arr[indx];
+    printSubsequence(indx+1,v,s,sum,arr,n);
+    v.pop_back();
+    s-=arr[indx];
+    printSubsequence(indx+1,v,s,sum,arr,n);
+}
+
+
 int main()
 {
     fact(5,1);
@@ -67,6 +87,11 @@ int main()
     cout<<"The string is palindorme";
     else
     cout<<"String is not palindrome";
+
+    //Let k=2 and the array be {1,2,1} the subsequence whose sum is equal to k are {1,1} and {2}
+    vector<int> subSeq;
+    int valArr[]={1,2,1};
+    printSubsequence(0,subSeq,0,2,valArr,3);
 
     return 0;
 }
