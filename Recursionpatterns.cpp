@@ -65,6 +65,42 @@ void printSubsequence(int indx,vector<int>&v,int s,int sum,int arr[],int n){
     s-=arr[indx];
     printSubsequence(indx+1,v,s,sum,arr,n);
 }
+//Recursive function to print the subsequence whose sum equals to k(only one subsequence)
+
+bool printOnlyOneSubsequence(int indx,vector<int>&v,int s,int sum,int arr[],int n){
+    if(indx==n){
+        if(s==sum){
+        for(int i:v){
+            cout<<i<<" ";
+        }
+        cout<<endl;
+        return true;
+        }
+        return false;
+    }
+    v.push_back(arr[indx]);
+    s+=arr[indx];
+    if(printOnlyOneSubsequence(indx+1,v,s,sum,arr,n)==true)
+    return true;
+    v.pop_back();
+    s-=arr[indx];
+    if(printOnlyOneSubsequence(indx+1,v,s,sum,arr,n)==true)
+    return true;
+    return false;
+}
+//Recursive function to count the number of subsequence
+int countSubsequence(int indx,int s,int sum,int arr[],int n){
+    if(indx==n){
+        return (sum==s)?1:0;
+ 
+    }
+    s+=arr[indx];
+    int left=countSubsequence(indx+1,s,sum,arr,n);
+    s-=arr[indx];
+    int right=countSubsequence(indx+1,s,sum,arr,n);
+    return left+right;
+}
+
 
 
 int main()
@@ -84,14 +120,17 @@ int main()
 
     string s="madam";
     if(check(s,0))
-    cout<<"The string is palindorme";
+    cout<<"The string is palindorme"<<endl;
     else
     cout<<"String is not palindrome";
 
     //Let k=2 and the array be {1,2,1} the subsequence whose sum is equal to k are {1,1} and {2}
     vector<int> subSeq;
     int valArr[]={1,2,1};
-    printSubsequence(0,subSeq,0,2,valArr,3);
+    printSubsequence(0,subSeq,0,2,valArr,3); //This will print all subsequences
+    printOnlyOneSubsequence(0,subSeq,0,2,valArr,3);  //This will print only one subsequence
+    int val=countSubsequence(0,0,2,valArr,3);  //Counts the number of subsequence
+    cout<<val<<endl;
 
     return 0;
 }
