@@ -27,7 +27,7 @@ Explanation: There is no such common subsequence, so the result is 0.
 // 1-> If the character at that index matches we add 1 to LCS and call function recursively by i-1 and j-1
 // 2-> else we call the function for i-1,j and i,j-1 and take the max among both
 // The base case will be if decrementing any index i or j we reach at -1 we return 0 indicating the end of string
-// ---Since in tabulation we cant fill 1 state we shift the index ie we treat any index as a 1 lesser value that is i=i-1 and j=j-1 and dp array  is also declared 1 size more
+// ---Since in tabulation we cant fill -1 state we shift the index ie we treat any index as a 1 lesser value that is i=i-1 and j=j-1 and dp array  is also declared 1 size more
 // With this condition if we modify the base case we can say that if we reach at index 0 we can return -1 indicating end of string
 
 class Solution {
