@@ -40,3 +40,11 @@
 # Debug files
 *.dSYM/
 *.dSYM/*
+
+*Tries/
+*Trees/
+*Greedy/
+*Bit Manipulation/
+*Binary Search/
+*Two Pointers and Sliding Window/
+
