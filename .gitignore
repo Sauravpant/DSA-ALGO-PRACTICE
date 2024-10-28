@@ -39,7 +39,7 @@
 
 # Debug files
 *.dSYM/
-*.dSYM/*
+*.dSYM/
 
 *Trees/
 *Greedy/
