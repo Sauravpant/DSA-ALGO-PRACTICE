@@ -39,11 +39,9 @@
 
 # Debug files
 *.dSYM/
-*.dSYM/*
+*.dSYM/
 
 *Trees/
 *Greedy/
 *Bit Manipulation/
 *Binary Search/
-
-
