@@ -34,7 +34,6 @@ trie.search("app");     // return True
 //     Node*links[26]; //a Node can store at max all alphabetical characters 26 characters 
 //     bool flag=false;
 // };
-
 struct Node{
     Node *links[26];
     bool flag=false;

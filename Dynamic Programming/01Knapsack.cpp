@@ -24,7 +24,7 @@ int fun(int indx,vector<int>&wt,int maxWt,vector<int>&value,vector<vector<int>>&
 }
 int knapsack(vector<int>weight,vector<int> value,int n,int maxWeight){
     vector<vector<int>>dp(n,vector<int>(maxWeight+1,-1));
-
+ 
     //Tabulation method(Nottom-Up Dp)
     for(int w=weight[0];w<=maxWeight;w++)
         dp[0][w]=value[0];

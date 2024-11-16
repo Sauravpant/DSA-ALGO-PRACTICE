@@ -67,6 +67,7 @@ class WordDictionary {
             if(!node->containsKey(word[index]))  return false;
             return isValid(word,index+1,node->getLink(word[index]));
         }
+        
     }
 public:
     WordDictionary() {
@@ -78,7 +79,7 @@ public:
         for(int i=0;i<word.length();i++){
             if(!node->containsKey(word[i])){
                 node->put(word[i],new Node());
-            }
+            }                             
             node=node->getLink(word[i]);
         }
         node->flag=true;  
